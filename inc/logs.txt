@@ -1,0 +1,70 @@
+Email: admin1
+Date: 27/12/2020
+Time: 08:12:37 pm
+System: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:84.0) Gecko/20100101 Firefox/84.0
+ 0 ---------------------- 1 
+Email: jh@jh.jh
+Date: 27/12/2020
+Time: 08:12:32 pm
+System: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:84.0) Gecko/20100101 Firefox/84.0
+ 0 ---------------------- 1 
+Email: admin1
+Date: 27/12/2020
+Time: 08:12:13 pm
+System: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:84.0) Gecko/20100101 Firefox/84.0
+ 0 ---------------------- 1 
+Email: kitchen1
+Date: 27/12/2020
+Time: 08:12:15 pm
+System: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:84.0) Gecko/20100101 Firefox/84.0
+ 0 ---------------------- 1 
+Email: branch1
+Date: 27/12/2020
+Time: 08:12:52 pm
+System: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47
+ 0 ---------------------- 1 
+Email: branch1
+Date: 27/12/2020
+Time: 09:12:54 pm
+System: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:84.0) Gecko/20100101 Firefox/84.0
+ 0 ---------------------- 1 
+Email: kitchen1
+Date: 27/12/2020
+Time: 09:12:23 pm
+System: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:84.0) Gecko/20100101 Firefox/84.0
+ 0 ---------------------- 1 
+Email: branch1
+Date: 27/12/2020
+Time: 09:12:07 pm
+System: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:84.0) Gecko/20100101 Firefox/84.0
+ 0 ---------------------- 1 
+Email: kitchen1
+Date: 27/12/2020
+Time: 09:12:23 pm
+System: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47
+ 0 ---------------------- 1 
+Email: branch1
+Date: 27/12/2020
+Time: 10:12:20 pm
+System: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:84.0) Gecko/20100101 Firefox/84.0
+ 0 ---------------------- 1 
+Email: branch2
+Date: 28/12/2020
+Time: 06:12:44 am
+System: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:84.0) Gecko/20100101 Firefox/84.0
+ 0 ---------------------- 1 
+Email: kitchen1
+Date: 28/12/2020
+Time: 06:12:54 am
+System: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:84.0) Gecko/20100101 Firefox/84.0
+ 0 ---------------------- 1 
+Email: branch1
+Date: 28/12/2020
+Time: 07:12:48 am
+System: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47
+ 0 ---------------------- 1 
+Email: admin1
+Date: 28/12/2020
+Time: 07:12:00 am
+System: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:84.0) Gecko/20100101 Firefox/84.0
+ 0 ---------------------- 1 
