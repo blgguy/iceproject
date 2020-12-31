@@ -11,6 +11,7 @@ if (!$user->im_logIn() || (trim ($user->session()) == '')) {
 }
 $ky = $user->session();
 $details = $user->viewById('mem74fi4rdh', $ky);
+$logs = $user->view('logstable');
 foreach ($details as $key) {
     $fName    = $key['firstName'];
     $lName    = $key['lastName'];
@@ -56,243 +57,46 @@ if ($role === 'branch') {
 </div>
 
   <div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'items')">Print Report</button>
+  <button class="tablinks" onclick="openCity(event, 'items')">SignIn Logs</button>
+  <a style="text-decoration: none;" href="rp/staffPrnt.php"><button class="tablinks">Print All Staff</button></a>
+  <a style="text-decoration: none;" href="rp/allbrnch.php"><button class="tablinks">Print All Branch report</button></a>
+  <a style="text-decoration: none;" href="rp/allkitchen.php"><button class="tablinks">Print All Kitchen report</button></a>
 </div>
 
 <div id="items" class="tabcontent">
 <div class="table-responsive">
 <table class="table">
   <thead class="thead-light">
-    <tr>
-    <th>Items</th>
-                    <th>Recieved</th>
-                    <th>Return</th>
-                    <th>Different</th>
-                    <th>Reason</th>
+    <a href="inc/logs.txt"><button class="btn btn-sucess" style="color: maroon; float: left; text-decoration: none;"> Download Logs </button></a>
+    <tr>  
+      <th>User Id</th>
+      <th>Ip Address</th>
+      <th>Date</th>
+      <th>Time</th>
     </tr>
   </thead>
+  <?php
+    foreach ($logs as $log) {  
+      $kyyy     = $log['userKey'];
+      $Username = $log['username'];
+      $datt     = $log['date'];
+      $timm     = $log['time'];
+      $ipAdd    = $log['ipAddress'];
+    
+  ?>
   <tr>
-    <td><input type="text" value="Cups" class="form-control" id="readOnlyInput" type="text" placeholder="Readonly input here…" readonly=""></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td>
-                   
-    </tr>
-    <tr>
-    <td><input type="text" value="Cups" class="form-control" id="readOnlyInput" type="text" placeholder="Readonly input here…" readonly=""></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td>
-                   
-    </tr>
-    <tr>
-    <td><input type="text" value="Cups" class="form-control" id="readOnlyInput" type="text" placeholder="Readonly input here…" readonly=""></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td>
-                   
-    </tr>
-    <tr>
-    <td><input type="text" value="Cups" class="form-control" id="readOnlyInput" type="text" placeholder="Readonly input here…" readonly=""></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td>
-                   
-    </tr>
-    <tr>
-    <td><input type="text" value="Cups" class="form-control" id="readOnlyInput" type="text" placeholder="Readonly input here…" readonly=""></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td>
-                   
-    </tr>
-    <tr>
-    <td><input type="text" value="Cups" class="form-control" id="readOnlyInput" type="text" placeholder="Readonly input here…" readonly=""></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td>
-                   
-    </tr>
-    <tr>
-    <td><input type="text" value="Cups" class="form-control" id="readOnlyInput" type="text" placeholder="Readonly input here…" readonly=""></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td>
-                   
-    </tr>
-    <tr>
-    <td><input type="text" value="Cups" class="form-control" id="readOnlyInput" type="text" placeholder="Readonly input here…" readonly=""></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td>
-                   
-    </tr>
-    <tr>
-    <td><input type="text" value="Cups" class="form-control" id="readOnlyInput" type="text" placeholder="Readonly input here…" readonly=""></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td>
-                   
-    </tr>
-    <tr>
-    <td>
-      <input type="submit" value="Save"  class="form-control btn" id="readOnlyInput"></td>
-                     </tr>
+    <td><input type="text" class="form-control"  value="<?php echo $Username;?>" id="readOnlyInput" readonly=""></td>
+    <td><input type="text" class="form-control"  value="<?php echo $ipAdd;?>" id="readOnlyInput" readonly=""></td>
+    <td><input type="text" class="form-control"  value="<?php echo $datt;?>" id="readOnlyInput" readonly=""></td>
+    <td><input type="text" class="form-control"  value="<?php echo $timm;?>" id="readOnlyInput" readonly=""></td>            
+  </tr>
+    <?php }?>
   </tbody>
 </table>
 </div>
 
 </div>
 
-<div id="cash" class="tabcontent">
-<div class="table-responsive">
-<table class="table">
-  <thead class="thead-light">
-  <tr>
-                    <th>Cash end of the Day</th>
-                    <th>Quantities</th>
-                   </tr>
-                </thead>
-                <form action="" method="POST">
-                <tbody>
-                  <tr>
-                    <td><input type="text" value="500X" class="form-control" id="readOnlyInput" type="text" placeholder="Readonly input here…" readonly=""></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td>
-                   </tr>
-                  <tr>
-                    <td><input type="text" value="100X" class="form-control" id="readOnlyInput" type="text" placeholder="Readonly input here…" readonly=""></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td>
-                   </tr>
-                  <tr>
-                    <td><input type="text" value="50X" class="form-control" id="readOnlyInput" type="text" placeholder="Readonly input here…" readonly=""></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td>
-                    </tr>
-                  <tr>
-                    <td><input type="text" value="10X" class="form-control" id="readOnlyInput" type="text" placeholder="Readonly input here…" readonly=""></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td>
-                   </tr>
-                  <tr>
-                    <td><input type="text" value="5X" class="form-control" id="readOnlyInput" type="text" placeholder="Readonly input here…" readonly=""></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td>
-                    </tr>
-                  <tr>
-                    <td><input type="text" value="1X" class="form-control" id="readOnlyInput" type="text" placeholder="Readonly input here…" readonly=""></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td>
-                    </tr>
-                  <tr>
-                    <td><input type="text" value="Total Exepenses" class="form-control" id="readOnlyInput" type="text" placeholder="Readonly input here…" readonly=""></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td>
-                    </tr>
-                  <tr>
-                    <td><input type="text" value="Total Delivery" class="form-control" id="readOnlyInput" type="text" placeholder="Readonly input here…" readonly=""></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td>
-                     </tr>
-                  <tr>
-                    <td><input type="text" value="Total Cash" class="form-control" id="readOnlyInput" type="text" placeholder="Readonly input here…" readonly=""></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td>
-                     </tr>
-                  <tr>
-                    <td><input type="text" value="ATM" class="form-control" id="readOnlyInput" type="text" placeholder="Readonly input here…" readonly=""></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td>
-                   </tr>
-                  <tr>
-                    <td><input type="text" value="Total Discount" class="form-control" id="readOnlyInput" type="text" placeholder="Readonly input here…" readonly=""></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td>
-                    </tr>
-                  <tr>
-                    <td><input type="text" value="Total sales" class="form-control" id="readOnlyInput" type="text" placeholder="Readonly input here…" readonly=""></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td>
-                    </tr>
-                  <tr>
-                    <td><input type="text" value="Sales In System" class="form-control" id="readOnlyInput" type="text" placeholder="Readonly input here…" readonly=""></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td>
-                   </tr>
-                  <tr>
-                    <td><input type="text" value="DIFFERENT" class="form-control" id="readOnlyInput" type="text" placeholder="Readonly input here…" readonly=""></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td> 
-                  </tr>
-    <tr>
-    <td>
-      <input type="submit" value="Save"  class="form-control btn" id="readOnlyInput"></td>
-                     </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-<div id="sign" class="tabcontent">
-<div class="table-responsive">
-<table class="table">
-  <thead class="thead-light">
-  <tr>
-                    <th>NAME</th>
-                    <th></th>
-                   </tr>
-                </thead>
-                <form action="" method="POST">
-                <tbody>
-                  <tr>
-                    <td><input type="text" value="Cups" class="form-control" id="readOnlyInput" type="text" placeholder="Readonly input here…" readonly=""></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td>
-                    </tr>
-                  <tr>
-                    <td><input type="text" value="Cups" class="form-control" id="readOnlyInput" type="text" placeholder="Readonly input here…" readonly=""></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td>
-                    </tr>
-                  <tr>
-                    <td><input type="text" value="Cups" class="form-control" id="readOnlyInput" type="text" placeholder="Readonly input here…" readonly=""></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td>
-                    </tr>
-                  <tr>
-                    <td><input type="text" value="Cups" class="form-control" id="readOnlyInput" type="text" placeholder="Readonly input here…" readonly=""></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td>
-                   </tr>
-                  <tr>
-                    <td><input type="text" value="Cups" class="form-control" id="readOnlyInput" type="text" placeholder="Readonly input here…" readonly=""></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td>
-                    </tr>
-                  <tr>
-                    <td><input type="text" value="Cups" class="form-control" id="readOnlyInput" type="text" placeholder="Readonly input here…" readonly=""></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td>
-                   </tr>
-                  <tr>
-                    <td><input type="text" value="Cups" class="form-control" id="readOnlyInput" type="text" placeholder="Readonly input here…" readonly=""></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td>
-                   </tr>
-                  <tr>
-                    <td><input type="text" value="Cups" class="form-control" id="readOnlyInput" type="text" placeholder="Readonly input here…" readonly=""></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td>
-                    </tr>
-                  <tr>
-                    <td><input type="text" value="Cups" class="form-control" id="readOnlyInput" type="text" placeholder="Readonly input here…" readonly=""></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td>
-                     </tr>
-                  <tr>
-                    <td><input type="text" value="Cups" class="form-control" id="readOnlyInput" type="text" placeholder="Readonly input here…" readonly=""></td>
-                    <td><input type="text" class="form-control" id="inputDefault"></td>
-                  </tr>
-    <tr>
-    <td>
-      <input type="submit" value="Save"  class="form-control btn" id="readOnlyInput"></td>
-                     </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-
-<div align="center">
-  <h1>Under Maintainance</h1>
-</div>
 
 
   </div>

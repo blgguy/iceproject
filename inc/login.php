@@ -40,7 +40,7 @@ if(isset($_POST['signInBtn'])){
 		$dt = date('d/m/Y');
 		$tm = date('h:m:s a');
 		$ip = $_SERVER['REMOTE_ADDR'];
-		$user->signInLog($auth, $dt, $tm, $ip);
+		$user->signInLog($auth, $username, $dt, $tm, $ip);
 		$user->rd('../dashboard.php');
 	}
 }

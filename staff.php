@@ -96,7 +96,6 @@ if (empty($firstname) || empty($lasttname) || empty($email) || empty($passwd) ||
 
   <div class="topnav" id="myTopnav">
   <a href="dashboard.php" class="active">Dashboard</a>
-  <a href="kitchen.php">Kitchen</a>
   <a href="profile.php">profile</a>
   <a href="staff.php" class="active">Staff</a>
  
@@ -124,7 +123,9 @@ if (empty($firstname) || empty($lasttname) || empty($email) || empty($passwd) ||
 <div class="table-responsive">
 <table class="table">
   <thead class="thead-light">
-    <p>Add staff details</p><span style="color: red;">if the user is branch staff please do check his branch </span>
+    <p>Add staff details</p>
+    <p style="color: red;">We assign default password which is <b>123456</b> to all staff</p>
+    <span style="color: red;">if the user is branch staff, please do select his branch.</span>
   </thead>
   <tbody>
     <form method="post">
@@ -136,7 +137,7 @@ if (empty($firstname) || empty($lasttname) || empty($email) || empty($passwd) ||
     <tr>
       <td>Email</td>
       <td><input type="email" name="email" class="form-control" id="inputDefault" placeholder="email"></td>
-      <td><input type="password" name="pass" class="form-control" id="inputDefault" placeholder="password"></td>
+      <td><input type="text" name="pass"  class="form-control" value="123456" class="form-control" id="readOnlyInput" readonly=""></td>
     </tr>
     
     <tr>
@@ -198,6 +199,7 @@ if (empty($firstname) || empty($lasttname) || empty($email) || empty($passwd) ||
       <?php }?>
   </tbody>
 </table>
+<a href="rp/staffPrnt.php"><button class="btn btn-sucess" style="color: maroon; float: left; text-decoration: none;"> Print all Staff </button></a>
 </div>
 </div>
 

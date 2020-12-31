@@ -219,6 +219,7 @@ if (isset($_POST['addSignature'])) {
 <div class="container">
 <div class="topnav" id="myTopnav">
   <a href="#home" class="active">Dashboard</a>
+  <a href="profile.php">Profile</a>
   <a href="saless.php">Sales Report</a>
   <a href="signout.php">LogOut</a>
   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>

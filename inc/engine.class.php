@@ -40,6 +40,42 @@ class engine extends keyS
         return $array;
     }
 
+    public function passCheck($password){
+
+        $sql = "SELECT * FROM `mem74fi4rdh` WHERE password = '$password'";
+        $query = $this->Connector->query($sql);
+
+        if($query->num_rows > 0){
+            $row = $query->fetch_array();
+            return $row['password'];
+        }
+        else{
+            return false;
+        }
+    }
+
+    public function passUpdate($pass, $key)
+    {        
+        $SQL = "";
+        $SQL .= "UPDATE `mem74fi4rdh`";
+        $SQL .= " SET `password` ='$pass', `updatee` ='1' WHERE `uniqKey` ='$key'";
+        $query = $this->Connector->query($SQL);
+        if ($query) {
+            return true;
+        }
+    }
+
+    public function userUpdate($fname, $lname, $email, $key)
+    {   
+        $SQL = "";
+        $SQL .= "UPDATE `mem74fi4rdh`";
+        $SQL .= " SET `firstName` ='$fname', `lastName` ='$lname', `email` ='$email', `updatee` ='1' WHERE `uniqKey` ='$key'";
+        $query = $this->Connector->query($SQL);
+        if ($query) {
+            return true;
+        }
+    }
+
     public function admLogin($username, $password){
 
         $sql = "SELECT * FROM `mem74fi4rdh` WHERE email = '$username' AND password = '$password' || username = '$username' AND password = '$password'";
@@ -194,10 +230,10 @@ class engine extends keyS
         }
     }
 
-    public function signInLog($key, $date, $time, $ip)
+    public function signInLog($key, $username, $date, $time, $ip)
     {
         // id   userKey date    time    ipAddress 
-        $SQL = "INSERT INTO `logstable` (`userKey`, `date`, `time`, `ipAddress`) VALUES ('$key', '$date', '$time', '$ip')";
+        $SQL = "INSERT INTO `logstable` (`userKey`, `username`, `date`, `time`, `ipAddress`) VALUES ('$key', '$username', '$date', '$time', '$ip')";
         $query = $this->Connector->query($SQL);
 
         if ($query) {
@@ -223,7 +259,7 @@ class engine extends keyS
 
     public function viewNoAdmin()
     {
-        $sql = "SELECT * FROM `mem74fi4rdh` WHERE uniqKey != 'hvhjyt5yr6u78jhgcgvhjb657'";
+        $sql = "SELECT * FROM `mem74fi4rdh` WHERE uniqKey != 'gufjgd8673rytgh876q34567trfuoesddsz'";
         $query = $this->Connector->query($sql);
 
         if($query->num_rows > 0){
